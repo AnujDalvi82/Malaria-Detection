@@ -20,3 +20,10 @@ venv/
 # Ignore all .pt files EXCEPT best.pt
 *.pt
 !best.pt
+
+# Local training and development scripts
+train_loop.py
+prepare_yolo_data.py
+log_model.py
+sync_notion.py
+dataset.yaml
