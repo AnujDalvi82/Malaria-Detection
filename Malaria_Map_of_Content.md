@@ -4,7 +4,7 @@ This file serves as the central hub for the Obsidian Graph View. By branching ou
 
 ## 📌 Core Documentation
 - [[PROJECT_SUMMARY.md|Full Project Journey & Technical Summary]]
-- [[README.md|Main Project Documentation]]
+- [[README.md|Main Project Documentation]] (Featuring AI-generated banner and tech badges)
 
 ## 🧬 Data & Preprocessing
 - **Raw Data**: `training.json`
@@ -13,17 +13,17 @@ This file serves as the central hub for the Obsidian Graph View. By branching ou
 - **Data Categories**: [[Infected Cells]] and [[Uninfected Cells]]
 
 ## 🧠 AI & Model Architecture
-- **Phase 1 Approach**: [[Image Classification]] using [[TensorFlow]] & [[Keras]]
-  - *Legacy Model*: `malaria_cell_classifier.h5`
+- **Phase 1 Approach**: [[Image Classification]] using [[TensorFlow]] & [[Keras]] (Legacy)
 - **Current Approach**: [[Object Detection]] using [[Ultralytics YOLOv8]]
-  - *Current Model Weights*: `best.pt` / `yolov8s.pt`
+  - *Current Model Weights*: `best.pt` (Achieved 91.1% Precision, 78.6% mAP50)
+  - *Automated Training*: [[train_loop.py]] (Handles PyTorch memory leaks via scheduled restarts)
   - *Hardware Optimization*: [[Apple Silicon MPS]] / [[Unified Memory]]
 
 ## ⚙️ Backend API & Services
 - **Web Framework**: [[FastAPI]]
 - **Main Application**: [[app.py]] (Serves the YOLOv8 model via `/predict` endpoint)
 - **Model Tracking**: [[log_model.py]] using [[MLflow]]
-- **Integration**: [[Notion Sync]] via [[sync_notion.py]]
+- **Integration**: [[Notion Sync]] via [[sync_notion.py]] (Token securely redacted for public deployment)
 
 ## 🎨 Frontend UI
 - **Location**: [[static]] directory
@@ -31,10 +31,11 @@ This file serves as the central hub for the Obsidian Graph View. By branching ou
 - **Core Files**: `index.html`, `script.js` (Reactive bounding box mapping), `style.css`
 
 ## 🚀 Deployment & DevOps
-- **Containerization**: [[Dockerfile]]
-- **Cloud Hosting**: [[Hugging Face Spaces]]
-- **Dependencies**: [[requirements.txt]] (Includes Headless OpenCV & PyTorch)
-- **CI/CD & Testing**: [[tests]] directory / [[test_app.py]] / [[test_live_api.py]] / [[GitHub Actions]]
+- **Containerization**: [[Dockerfile]] (Configured for OpenCV C++ headless bindings)
+- **Version Control**: [[GitHub]] (Massive data and logs safely ignored via `.gitignore`)
+- **Cloud Hosting**: [[Hugging Face Spaces]] (Imported and auto-deployed directly from GitHub)
+- **Dependencies**: [[requirements.txt]]
+- **Testing**: [[tests]] directory / [[test_app.py]] / [[test_live_api.py]]
 
 ---
-*Tags:* #malaria #computervision #deeplearning #yolov8 #fastapi #docker #huggingface #apple-silicon
+*Tags:* #malaria #computervision #deeplearning #yolov8 #fastapi #docker #huggingface #apple-silicon #github
