@@ -1,15 +1,17 @@
----
-title: MalariaVision AI
-emoji: 🔬
-colorFrom: blue
-colorTo: purple
-sdk: docker
-app_port: 7860
----
+<div align="center">
+  <img src="static/banner.png" alt="MalariaVision AI Banner" width="100%">
+  
+  # MalariaVision AI 🔬
+  
+  ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+  ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+  ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+  ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+  
+  *An intelligent, full-stack object detection pipeline that identifies and highlights malaria parasites in full microscope slide imaging.*
+</div>
 
-# MalariaVision AI 🔬
 
-An intelligent, full-stack object detection pipeline that identifies and highlights malaria parasites in full microscope slide imaging.
 
 ## Overview
 This repository contains the end-to-end MLOps pipeline for a Malaria Cell Detection AI. It transitioned from a basic single-cell Keras classifier to a state-of-the-art YOLOv8s object detector coupled with a beautiful, responsive web interface.
