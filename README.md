@@ -1,3 +1,12 @@
+---
+title: MalariaVision AI
+emoji: 🔬
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+---
+
 <div align="center">
   <img src="static/banner.png" alt="MalariaVision AI Banner" width="100%">
   
