@@ -58,16 +58,16 @@ async def predict_cell(file: UploadFile = File(...)):
             cls_id = int(box.cls[0]) 
             label = result.names[cls_id]
             
-            detections.append({
-                "label": label,
-                "confidence": conf,
-                "box": {"x1": x1, "y1": y1, "x2": x2, "y2": y2}
-            })
-            
             if "parasite" in label.lower():
                 parasite_detected = True
                 if conf > highest_parasite_conf:
                     highest_parasite_conf = conf
+
+                detections.append({
+                    "label": label,
+                    "confidence": conf,
+                    "box": {"x1": x1, "y1": y1, "x2": x2, "y2": y2}
+                })
 
         return JSONResponse(content={
             "filename": file.filename,
