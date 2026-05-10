@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaria AI Diagnostics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="logo-mark">⚡</div>
+                <h1>MalariaVision AI</h1>
+            </div>
+            <p>Single Cell Analysis Engine</p>
+        </header>
+
+        <main>
+            <div class="upload-section glass-panel" id="drop-zone">
+                <input type="file" id="file-input" accept="image/*" hidden>
+                <div class="upload-content">
+                    <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <h3>Upload Cell Image</h3>
+                    <p>Drag & drop or <span class="highlight">click to browse</span></p>
+                    <p class="subtitle">Supports standard microscope imagery</p>
+                </div>
+            </div>
+
+            <div class="loading-state" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing cell morphology...</p>
+            </div>
+
+            <div class="result-section glass-panel" id="result-section">
+                <div class="preview-container">
+                    <img id="preview-img" src="" alt="Cell Image">
+                    <!-- Future YOLO bounding box layer can go over this image -->
+                    <div id="bbox-overlay"></div>
+                </div>
+                
+                <div class="analysis-details">
+                    <div class="status-header">
+                        <h2>Diagnosis</h2>
+                        <div class="badge" id="diagnosis-badge">Awaiting</div>
+                    </div>
+
+                    <div class="metric-container">
+                        <div class="metric-header">
+                            <span>Parasite Confidence</span>
+                            <span id="confidence-text">0.00%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="confidence-bar"></div>
+                        </div>
+                    </div>
+                    
+                    <button class="reset-btn" id="reset-btn">Analyze Another Image</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

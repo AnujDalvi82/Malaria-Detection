@@ -1,0 +1,8 @@
+path: /Users/anujdalvi/Library/CloudStorage/GoogleDrive-anujdalvi9511@gmail.com/My Drive/malaria/datasets/malaria_yolo
+train: images/train
+val: images/val
+
+names:
+  0: parasite
+  1: red_blood_cell
+  2: leukocyte

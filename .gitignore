@@ -1,0 +1,22 @@
+# Data and images
+images/
+datasets/
+*.json
+
+# Training logs and old models
+runs/
+yolov8s.pt
+
+# Python caches
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+
+# Mac specific
+.DS_Store
+
+# Ignore all .pt files EXCEPT best.pt
+*.pt
+!best.pt
